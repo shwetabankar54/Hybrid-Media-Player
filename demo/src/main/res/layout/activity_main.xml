@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <Button
+        android:id="@+id/btSetSources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btSpeed"
+        android:layout_alignStart="@+id/btPause"
+        android:layout_alignLeft="@+id/btPause"
+        android:layout_marginStart="-13dp"
+        android:layout_marginLeft="-13dp"
+        android:layout_marginTop="7dp"
+        android:text="Set Sources 2" />
+
+    <Button
+        android:id="@+id/btPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fastForward"
+        android:layout_alignStart="@+id/fastForward"
+        android:layout_below="@+id/fastForward"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/btNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fastForward"
+        android:layout_alignBottom="@+id/fastForward"
+        android:layout_toLeftOf="@+id/btPause"
+        android:layout_toStartOf="@+id/btPause"
+        android:text="Next" />
+
+    <SurfaceView
+        android:id="@+id/playerView"
+        android:layout_width="360px"
+        android:layout_height="610px"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/btPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerView"
+        android:layout_centerHorizontal="true"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/btCreatePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerView"
+        android:layout_toLeftOf="@+id/btPlay"
+        android:layout_toStartOf="@+id/btPlay"
+        android:text="Create Player" />
+
+    <Button
+        android:id="@+id/btStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fastForward"
+        android:layout_alignBottom="@+id/fastForward"
+        android:layout_toEndOf="@+id/btPause"
+        android:layout_toRightOf="@+id/btPause"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/btSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btPause"
+        android:layout_alignStart="@+id/btPause"
+        android:layout_below="@+id/btPause"
+        android:text="speed x2" />
+
+    <androidx.mediarouter.app.MediaRouteButton
+        android:id="@+id/media_route_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btStop"
+        android:layout_toEndOf="@+id/btPlay"
+        android:layout_toRightOf="@+id/btPlay"
+        android:mediaRouteTypes="user"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:targetApi="jelly_bean" />
+
+    <Button
+        android:id="@+id/fastForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btPlay"
+        android:layout_alignStart="@+id/btPlay"
+        android:layout_below="@+id/btPlay"
+        android:text=">>" />
+</RelativeLayout>
